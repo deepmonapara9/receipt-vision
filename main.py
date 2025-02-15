@@ -6,7 +6,6 @@ import json
 # This function reads an image from the specified path, converts it to grayscale,
 # applies thresholding, and returns the processed image to improve OCR results.
 def preprocess_image(image_path):
-    """Preprocess the image for better OCR accuracy."""
     image = cv2.imread(image_path)
 
     # Convert to grayscale
@@ -21,12 +20,10 @@ def preprocess_image(image_path):
 
 #  This function extracts text from the image using Tesseract OCR.
 def extract_text(image_path):
-    """Extract text from the image using Tesseract OCR."""
     return pytesseract.image_to_string(image_path)
 
 # This function uses the Mistral model to extract structured receipt data from the extracted text.
 def ai_extract(text_content):
-    """Use Mistral model to extract structured receipt data."""
     prompt = f"""
     You are a receipt parser AI. Below is the text extracted from an image of a store receipt.
     Convert it into a JSON object with the following structure:
