@@ -1,4 +1,4 @@
-# Receipt Vision \U0001F9FE\U0001F50D  
+# Receipt Vision 🧾🔍 
 
 Receipt Vision is a **local AI-powered receipt parser** that extracts structured data from store receipts using **OCR (Tesseract)** and the **Mistral model** running on Ollama.  
 
